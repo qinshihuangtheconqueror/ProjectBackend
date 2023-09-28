@@ -1,0 +1,14 @@
+mixin sort(sortOptions)
+    div(sort)
+        select(
+        class="form-control"
+        name="sort"
+        sort-select
+        )
+            each item,index in sortOptions
+                option(value=`${item.value}`) #{item.text}
+
+        button(
+        class="btn btn-danger mt-2"
+        sort-clear
+        ) Clear
